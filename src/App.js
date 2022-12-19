@@ -1,10 +1,10 @@
-import './App.css';
-import Header from './Components/Header/Header.js';
+import './tailwind.css';
+import SearchingBoxAlgolia from './Searching.js'
 
 function App() {
   return (
     <>
-      <Header></Header>
+      <SearchingBoxAlgolia />
     </>
   );
 }

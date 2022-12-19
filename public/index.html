@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="utf-8" />
@@ -9,24 +10,274 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <script src="../src/Components/Header/js_mobile.js" defer></script>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" href="../src/Components/Header/Header.css">
+    <script src="../src/Searching.js" defer></script>
     <title>React App</title>
+    <script src="./Header.js" defer></script>
+    <link rel="stylesheet" href="./Header.css">
+    <link rel="stylesheet" href="./searchBar.css">
+    <script src="./searchBar.js" defer></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <!-- Search Module ************************************* Search Module -->
+    <div id="searchModal" class="modal">
+      <div class="content">
+        <input class="search-input" type="text" placeholder="ابحث هنا .." id="input-field-algolia"/>
+        <div class="results">
+          <h2>البيانات</h2>
+           <ul id="results-container">
+             <li tabindex="0" class="result-container">
+               <img src="https://webkit.org/demos/srcset/image-src.png" class="result-img" />
+               <div class="result-details">
+              <h3 class="result-title">الكيمياء العضويه - 3ث</h3>
+              <p class="result-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nisi facere atque autem perspiciatis ipsa pariatur ut ipsam aut doloribus?</p>
+              <p class="result-poster">Ebrahim Ahmed</p>
+              <p class="result-type">Equations</p>
+              </div>
+             </li>
+             <li tabindex="0" class="result-container" onclick="">
+               <img src="https://webkit.org/demos/srcset/image-src.png" class="result-img" />
+               <div class="result-details">
+              <h3 class="result-title">الكيمياء العضويه - 3ث</h3>
+              <p class="result-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nisi facere atque autem perspiciatis ipsa pariatur ut ipsam aut doloribus?</p>
+              <p class="result-poster">Ebrahim Ahmed</p>
+              <p class="result-type">Equations</p>
+              </div>
+             </li>
+             <li tabindex="0" class="result-container" onclick="">
+               <img src="https://webkit.org/demos/srcset/image-src.png" class="result-img" />
+               <div class="result-details">
+              <h3 class="result-title">الكيمياء العضويه - 3ث</h3>
+              <p class="result-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nisi facere atque autem perspiciatis ipsa pariatur ut ipsam aut doloribus?</p>
+              <p class="result-poster">Ebrahim Ahmed</p>
+              <p class="result-type">Equations</p>
+              </div>
+             </li>
+             <li tabindex="0" class="result-container" onclick="">
+               <img src="https://webkit.org/demos/srcset/image-src.png" class="result-img" />
+               <div class="result-details">
+              <h3 class="result-title">الكيمياء العضويه - 3ث</h3>
+              <p class="result-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nisi facere atque autem perspiciatis ipsa pariatur ut ipsam aut doloribus?</p>
+              <p class="result-poster">Ebrahim Ahmed</p>
+              <p class="result-type">Equations</p>
+              </div>
+             </li>
+             <li tabindex="0" class="result-container" onclick="">
+               <img src="https://webkit.org/demos/srcset/image-src.png" class="result-img" />
+               <div class="result-details">
+              <h3 class="result-title">الكيمياء العضويه - 3ث</h3>
+              <p class="result-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nisi facere atque autem perspiciatis ipsa pariatur ut ipsam aut doloribus?</p>
+              <p class="result-poster">Ebrahim Ahmed</p>
+              <p class="result-type">Equations</p>
+              </div>
+             </li>
+           </ul>
+           <h2>الشائع</h2>
+           
+          <ul style="margin-bottom: 1em;">
+            <li tabindex="0" class="tag">المصادر</li>
+            <li tabindex="0" class="tag">سياسةالخصوصية</li>
+            <li tabindex="0" class="tag">حقوق النشر</li>
+          </ul>
+        </div><!-- end .results -->
+        <div class="tag-results">
+        <button class="back"><i class="material-icons">arrow_back</i></button>
+        <span class="selected-tag">storymapping</span>
+        <ul>
+           <li tabindex="0">AngularJS</li>
+           <li tabindex="0">ReactJS</li>
+           <li tabindex="0">Browserify</li>
+         </ul>
+        </div><!-- end .tag-results -->
+      </div>
+      <button data-dismiss="modal"><i class="material-icons">X</i></button>
+    </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <!-- Header ************************************* Header -->
+    <header class="globalNav noDropdownTransition">
+
+
+      <div class="container-lg">
+        <ul class="navRoot">
+    
+    
+          <li class="navSection logo">
+            <a class="rootLink item-home colorize" href="https://mozakrty.com/">ذاكر</a>
+          </li>
+    
+          <li class="navSection primary">
+            <a class="rootLink item-company hasDropdown colorize" data-dropdown="company">
+              حولنا
+            </a>
+            <a class="rootLink item-products hasDropdown colorize" data-dropdown="products">
+              الصفوف الدراسية
+            </a>
+            <a class="rootLink item-developers hasDropdown colorize" data-dropdown="developers">
+              الرئيسية
+            </a>
+            
+          </li>
+    
+          <li class="navSection secondary">
+            <a  data-toggle="modal" data-target="searchModal" class="rootLink item-dashboard colorize" data-adroll-segment="submit_two" href="#" id="search_pc" onclick="">
+              البحث
+            </a>
+          </li>
+    
+    
+    
+          <li class="navSection mobile">
+            <a class="rootLink item-mobileMenu colorize"><h2>Menu</h2></a>
+            <div class="popup">
+              <div class="popupContainer">
+                <a class="popupCloseButton">Close</a>
+                <div class="mobileProducts">
+                  <h4 style="position: fixed; left:0;">الصفوف الثانوية</h4>
+                  <div class="mobileProductsList">
+                    <ul>
+                      <li><a class="linkContainer item-relay" href="https://mozakrty.com/firstSecondary/">
+                        <svg viewBox="0 0 48 48"><path fill="#FFA27B" class="hover-fillLight" d="M24 0c13.255 0 24 10.745 24 24S37.255 48 24 48 0 37.255 0 24 10.745 0 24 0z"></path><path fill="#C23D4B" class="hover-fillDark" d="M24 12.5c8.285 0 15 6.828 15 15.25S32.285 43 24 43c-8.284 0-15-6.828-15-15.25S15.716 12.5 24 12.5z"></path><path fill="#FFF" d="M25 38.925v6.288a.787.787 0 0 1-.788.787h-.424a.787.787 0 0 1-.788-.788v-6.287c-3.668-.49-6.5-3.623-6.5-7.425a7.5 7.5 0 0 1 15 0c0 3.802-2.832 6.935-6.5 7.425z"></path></svg>الأول الثانوي
+                      </a></li>
+                      <li><a class="linkContainer item-atlas" href="https://mozakrty.com/secondSecondary/">
+                        <svg viewBox="0 0 48 48"><path fill="#FCD669" class="hover-fillLight" d="M24 0c13.255 0 24 10.745 24 24S37.255 48 24 48 0 37.255 0 24 10.745 0 24 0z"></path><path fill="#CE7C3A" class="hover-fillDark" d="M24.012 1.834c.366.005.73.196.92.575l16.825 33.72c.396.79-.314 1.685-1.175 1.48L24 33.626V1.834h.01z"></path><path fill="#FFF" d="M24 1.834v31.794l-16.584 3.98A1.043 1.043 0 0 1 6.24 36.13L23.067 2.41c.195-.39.572-.58.947-.576H24z"></path></svg>الثاني الثانوي
+                      </a></li>
+                      <li><a class="linkContainer item-radar" href="https://mozakrty.com/thirdSecondary/">
+                        <svg viewBox="0 0 48 48"><path class="hover-fillLight" fill="#F6A4EB" d="M41.364 21.886h6.538c.06.697.098 1.4.098 2.114 0 13.255-10.745 24-24 24S0 37.255 0 24 10.745 0 24 0c6.833 0 12.993 2.86 17.364 7.442v14.444z"></path><path fill="#FFF" d="M37.746 37.4a1.3 1.3 0 0 1 .92-.38c.72 0 1.303.444 1.303 1.163 0 .503-.353.982-.708 1.292-3.484 3.122-8.325 5.53-13.783 5.53-11.75 0-19.486-9.538-19.486-18.83 0-8.72 7.195-16.19 15.25-16.19s11.227 5.54 11.227 5.54L37.747 37.4z"></path><path class="hover-fillDark" fill="#9251AC" d="M47.995 24zm0 0c0-.995-.807-1.974-1.802-1.974-1.15 0-1.8.94-1.8 1.83-.09 3.174-1.228 7.127-3.453 10.182-2.355 3.232-6.91 6.956-13.242 6.956-7.625 0-13.213-5.767-13.213-11.925 0-4.3 2.886-7.17 5.828-7.17 1.588 0 2.48.683 2.965 1.312.362.468 1.063.493 1.482.074L40.968 7.032A23.926 23.926 0 0 1 47.995 24z"></path></svg>الثالث الثانوي
+                        <span class="new-badge">جديد</span>
+                      </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mobileSecondaryNav">
+                  <ul>
+                    <li>
+                      <a class="item-pricing" href="https://mozakrty.com/about" data-analytics-action="pricing" data-action-source="mobile-nav">
+                        حولنا
+                      </a>
+                    </li>
+                      <li><a class="item-workswith" href="https://mozakrty.com/privacy">سياسة الخصوصية وحقوق الملكية</a></li>
+                </div>
+                <a  data-toggle="modal" data-target="searchModal" class="mobileSignIn" data-adroll-segment="submit_two" href="https://dashboard.stripe.com/login" id="search_mobile">البحث</a>
+              </div>
+            </div>
+          </li>
+    
+    
+        </ul>
+      </div>
+    
+    
+    
+      <div class="dropdownRoot">
+        <div class="dropdownBackground" style="transform: translateX(452px) scaleX(0.707692) scaleY(1.1075);">
+          <div class="alternateBackground" style="transform: translateY(255.53px);"></div>
+        </div>
+        <div class="dropdownArrow" style="transform: translateX(636px) rotate(45deg);"></div>
+        <div class="dropdownContainer" style="transform: translateX(452px); width: 368px; height: 443px;">
+    
+          <div class="dropdownSection left" data-dropdown="products">
+            <div class="dropdownContent">
+    
+              <div class="linkGroup">
+                <ul class="productsGroup">
+                  
+                  <li><a class="linkContainer item-relay" href="https://stripe.com/relay">
+                    <svg viewBox="0 0 48 48"><path fill="#FFA27B" class="hover-fillLight" d="M24 0c13.255 0 24 10.745 24 24S37.255 48 24 48 0 37.255 0 24 10.745 0 24 0z"></path><path fill="#C23D4B" class="hover-fillDark" d="M24 12.5c8.285 0 15 6.828 15 15.25S32.285 43 24 43c-8.284 0-15-6.828-15-15.25S15.716 12.5 24 12.5z"></path><path fill="#FFF" d="M25 38.925v6.288a.787.787 0 0 1-.788.787h-.424a.787.787 0 0 1-.788-.788v-6.287c-3.668-.49-6.5-3.623-6.5-7.425a7.5 7.5 0 0 1 15 0c0 3.802-2.832 6.935-6.5 7.425z"></path></svg>
+                    <div class="productLinkContent">
+                      <h3 class="linkTitle">الأول الثانوي</h3>
+                      <!-- <p class="linkSub">جميع المواد وكافة الملخصات</p> -->
+                    </div>
+                  </a></li>
+                  <li><a class="linkContainer item-atlas" href="https://stripe.com/atlas">
+                    <svg viewBox="0 0 48 48"><path fill="#FCD669" class="hover-fillLight" d="M24 0c13.255 0 24 10.745 24 24S37.255 48 24 48 0 37.255 0 24 10.745 0 24 0z"></path><path fill="#CE7C3A" class="hover-fillDark" d="M24.012 1.834c.366.005.73.196.92.575l16.825 33.72c.396.79-.314 1.685-1.175 1.48L24 33.626V1.834h.01z"></path><path fill="#FFF" d="M24 1.834v31.794l-16.584 3.98A1.043 1.043 0 0 1 6.24 36.13L23.067 2.41c.195-.39.572-.58.947-.576H24z"></path></svg>
+                    <div class="productLinkContent">
+                      <h3 class="linkTitle">الثاني الثانوي</h3>
+                      <!-- <p class="linkSub">جميع المواد وكافة الملخصات</p> -->
+                    </div>
+                  </a></li>
+                  <li><a class="linkContainer item-radar" href="https://stripe.com/radar">
+                    <svg viewBox="0 0 48 48"><path class="hover-fillLight" fill="#F6A4EB" d="M41.364 21.886h6.538c.06.697.098 1.4.098 2.114 0 13.255-10.745 24-24 24S0 37.255 0 24 10.745 0 24 0c6.833 0 12.993 2.86 17.364 7.442v14.444z"></path><path fill="#FFF" d="M37.746 37.4a1.3 1.3 0 0 1 .92-.38c.72 0 1.303.444 1.303 1.163 0 .503-.353.982-.708 1.292-3.484 3.122-8.325 5.53-13.783 5.53-11.75 0-19.486-9.538-19.486-18.83 0-8.72 7.195-16.19 15.25-16.19s11.227 5.54 11.227 5.54L37.747 37.4z"></path><path class="hover-fillDark" fill="#9251AC" d="M47.995 24zm0 0c0-.995-.807-1.974-1.802-1.974-1.15 0-1.8.94-1.8 1.83-.09 3.174-1.228 7.127-3.453 10.182-2.355 3.232-6.91 6.956-13.242 6.956-7.625 0-13.213-5.767-13.213-11.925 0-4.3 2.886-7.17 5.828-7.17 1.588 0 2.48.683 2.965 1.312.362.468 1.063.493 1.482.074L40.968 7.032A23.926 23.926 0 0 1 47.995 24z"></path></svg>
+                    <div class="productLinkContent">
+                      <h3 class="linkTitle">الثالث الثانوي<span class="new-badge">جديد</span></h3>
+                      <p class="linkSub">الأكثر تركيزا الأن</p>
+                    </div>
+                  </a></li>
+                </ul>
+              </div>
+    
+              <ul class="linkGroup linkList prodsubGroup">
+                  <li><a class="linkContainer item-workswith" href="#">
+                    <h3 class="linkTitle linkIcon"><svg width="17" height="17"><path class="hover-fillLight" fill="#87BBFD" d="M15.998 12.495a1.03 1.03 0 0 1-.595.908L8.93 16.395a1.018 1.018 0 0 1-.86 0l-6.473-2.992a1.03 1.03 0 0 1-.594-.908V4.51c.006-.2.07-.39.18-.55L8.5 7.338l7.32-3.38c.108.16.172.35.178.55v7.984z"></path><path class="hover-fillDark" fill="#6772E5" d="M15.998 12.495a1.03 1.03 0 0 1-.595.908L8.93 16.395a1.026 1.026 0 0 1-.43.095V7.34l7.32-3.38c.11.16.173.35.18.55v7.984z"></path><path class="hover-fillLight" fill="#87BBFD" d="M8.5 5C6.567 5 5 4.228 5 3.275v-1.15h.098c.36.768 1.742 1.34 3.402 1.34 1.66.002 3.043-.572 3.402-1.34H12v1.15C12 4.228 10.433 5 8.5 5z"></path></svg>قريبا باقي الصفوف الدراسية</h3>
+                  </a></li>
+              </ul>
+    
+            </div>
+          </div>
+    
+          <div class="dropdownSection active" data-dropdown="developers">
+            <div class="dropdownContent">
+    
+              <div class="linkGroup documentationGroup">
+                <a class="linkContainer withIcon item-documentation" href="/">
+                  <h3 class="linkTitle linkIcon"><svg width="17" height="17"><path fill="#87BBFD" class="hover-fillLight" d="M.945 1.998h3.632C6.744 1.998 8.5 3.005 8.5 4.83v11.583c-.512 0-1.015-.337-1.33-.59-1.03-.828-3.057-.828-5.222-.828H.945A.944.944 0 0 1 0 14.052V2.944C0 2.422.423 2 .945 2z"></path><path fill="#6772E5" class="hover-fillDark" d="M16.055 1.998h-3.632C10.257 1.998 8.5 3.005 8.5 4.83v11.583c.512 0 1.015-.337 1.33-.59 1.03-.828 3.057-.828 5.222-.828h1.003A.944.944 0 0 0 17 14.05V2.945A.944.944 0 0 0 16.055 2z"></path></svg>الصفحة الرئيسية</h3>
+                  <span class="linkSub">اكتساب العلم و المهارات!</span>
+                </a>
+                
+              </div>
+    
+              <ul class="linkGroup linkList developersGroup">
+                <li><a class="linkContainer item-apiReference" href="#">
+                  <h3 class="linkTitle linkIcon"><svg width="17" height="17"><path d="M2 15h13M2 11h13M2 7h13M2 3h13" fill="none" stroke="#6772e5" class="hover-strokeDark" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>تذكير</h3>
+                </a></li>
+                
+              </ul>
+    
+            </div>
+          </div>
+    
+          <div class="dropdownSection right" data-dropdown="company">
+            <div class="dropdownContent">
+    
+              <ul class="linkGroup linkList companyGroup">
+                <li><a class="linkContainer item-about" href="https://stripe.com/about">
+                  <h3 class="linkTitle linkIcon"><svg width="17" height="17"><path fill="#6772E5" class="hover-fillDark" d="M8.5 17a8.5 8.5 0 1 1 0-17 8.5 8.5 0 0 1 0 17zm.178-10.89c.76 0 1.726.278 2.486.69V4.443c-.828-.33-1.656-.502-2.484-.502-2.028 0-3.41 1.06-3.41 2.83 0 2.77 3.8 2.32 3.8 3.513 0 .462-.37.612-.93.612-.827 0-1.867-.366-2.706-.823v2.388c.93.4 1.843.592 2.705.592 2.077 0 3.48-1.027 3.48-2.827 0-2.98-3.82-2.447-3.82-3.572-.003-.39.352-.542.877-.542z"></path></svg>معلومات حولنا</h3>
+                </a></li>
+                
+              </ul>
+    
+              <div class="linkGroup blogGroup">
+                
+                <ul class="blogPosts">
+                  <li><a href="https://mozakrty.com/privacy">
+                    <span class="title ">سياسات الخصوصية</span>
+                    
+                  </a></li>
+                  <li><a href="https://mozakrty.com/copyright">
+                    <span class="title ">حقوق الملكية</span>
+                    
+                  </a></li>
+                  <li><a href="/blog/works-with-stripe">
+                    <span class="title ">بيانات اخرى</span>
+                    
+                  </a></li>
+                </ul>
+              </div>
+    
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    
+    </header>
+
+      <div id="root">
+
+        </div>
+  
+
   </body>
 </html>
