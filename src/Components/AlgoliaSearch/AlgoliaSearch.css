@@ -1,3 +1,5 @@
+
+
 .modal {
   position: fixed;
   top: 0;
@@ -216,10 +218,15 @@
 
 .result-title {
   font-size: 2.5rem;
+  color: #fff;
 }
 
 .result-description {
   font-size: 1.5rem;
+  max-width: 40ch;
+}
+.ais-Hits-item {
+  list-style: none !important;
 }
 
 .result-poster {

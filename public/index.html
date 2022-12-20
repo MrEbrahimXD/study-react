@@ -8,19 +8,23 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="مرحبا بك في منصة مذكرتي هنا توجد جميع المذكرات والملفات المميزة"
     />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../src/Components/AlgoliaSearch/AlgoliaSearch.css">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script src="../src/Searching.js" defer></script>
     <title>React App</title>
     <script src="./Header.js" defer></script>
     <link rel="stylesheet" href="./Header.css">
     <link rel="stylesheet" href="./searchBar.css">
     <script src="./searchBar.js" defer></script>
+     
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- <canvas id="gradient-canvas" data-transition-in></canvas> -->
 
     <!-- Search Module ************************************* Search Module -->
     <div id="searchModal" class="modal">
@@ -39,7 +43,7 @@
     
     
           <li class="navSection logo">
-            <a class="rootLink item-home colorize" href="https://mozakrty.com/">ذاكر</a>
+            <a class="rootLink item-home colorize" href="https://mozakrty.com/"><img src="../src/Images/logo.png" width="50"/></a>
           </li>
     
           <li class="navSection primary">
@@ -63,7 +67,7 @@
     
     
     
-          <li class="navSection mobile">
+          <li class="navSection mobile" dir="ltr">
             <a class="rootLink item-mobileMenu colorize"><h2>Menu</h2></a>
             <div class="popup">
               <div class="popupContainer">
