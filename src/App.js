@@ -1,10 +1,11 @@
 import './tailwind.css';
-import SearchingBoxAlgolia from './Searching.js'
+// import SearchingBoxAlgolia from './Searching.js'
+
 
 function App() {
   return (
     <>
-      <SearchingBoxAlgolia />
+      
     </>
   );
 }

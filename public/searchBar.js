@@ -84,25 +84,11 @@ class SearchModal {
   
     close() {
       this.modal.classList.remove('active');
-      this.search.blur();
-      this.btn.focus();
       this.hideTagResults();
-      this.modal.addEventListener('transitionend', e => {
-        if (e.target === this.modal && e.propertyName === 'visibility') {
-          this.search.value = "";
-        }
-      });
     }
   
     open() {
       this.modal.classList.add('active');
-      this.modal.addEventListener('transitionend', e => {
-        if (e.target === this.modal && e.propertyName === 'visibility') {
-          setTimeout(() => {
-            this.search.focus();
-          }, 100);
-        }
-      });
     }}
   
   

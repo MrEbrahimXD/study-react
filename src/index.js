@@ -3,6 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AlgoliaSearch from './Components/AlgoliaSearch/AlgoliaSearch.js';
+
+const AlgoliaSearchBox = ReactDOM.createRoot(document.getElementById('content'));
+AlgoliaSearchBox.render (
+  <React.StrictMode>
+    <AlgoliaSearch />
+  </React.StrictMode>
+)
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

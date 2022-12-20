@@ -442,7 +442,7 @@ code, pre {
   display: inline;
   position: relative;
   height: 18px;
-  margin-left: 11px;
+  margin-right: 11px;
   border-radius: 9px;
   font-size: 12px;
   font-weight: 600;
@@ -1125,12 +1125,12 @@ code, pre {
 }
 
 .globalNav .withIcon .linkTitle {
-  margin-left: -28px;
+  margin-right: -28px;
 }
 
 .globalNav .new-badge {
   display: inline-block;
-  margin-left: 5px;
+  margin-right: 5px;
   vertical-align: 2px;
   color: #fff;
   text-transform: uppercase;
@@ -1180,7 +1180,7 @@ code, pre {
 
 .globalNav .productLinkContent {
   flex: 1;
-  margin-left: 20px;
+  margin-right: 20px;
   flex-direction: column;
   min-height: 71px;
 }
@@ -1267,7 +1267,7 @@ code, pre {
 .globalNav .blogPosts a:after {
   content: "➢";
   font: normal 16px StripeIcons;
-  margin-left: 6px;
+  margin-right: 6px;
   vertical-align: -3px;
 }
 
@@ -1413,7 +1413,7 @@ code, pre {
 .globalNav .mobileSignIn:after {
   font: normal 16px StripeIcons;
   content: "➜";
-  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .globalNav .mobileProducts {
@@ -1975,7 +1975,7 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   border: 1px solid #e6ebf1;
   display: inline-block;
   vertical-align: 1px;
-  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .globalFooterNav .languagePicker {
@@ -2055,7 +2055,7 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 .globalFooterNav .countryList h4 a:after {
   font: normal 16px StripeIcons;
   content: "→";
-  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .globalFooterNav .globalLink {
@@ -2081,5 +2081,5 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 .globalFooterNav .globalLink strong:after {
   font: normal 16px StripeIcons;
   content: "→";
-  margin-left: 6px;
+  margin-right: 6px;
 }
