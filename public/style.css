@@ -1,0 +1,16 @@
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+canvas#glsl-bg {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    --gradient-color-1: #6EC3F4; 
+    --gradient-color-2: #EAE2FF; 
+    --gradient-color-3: #B9BEFF;  
+    --gradient-color-4: #A2FFE3;
+    --gradient-speed: 0.0000150;
+  }

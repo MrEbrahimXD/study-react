@@ -1,0 +1,337 @@
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+  transform: translateY(1rem) translateZ(0);
+  transition: all 0.3s ease;
+}
+.modal.active {
+  visibility: visible;
+  transform: translateY(0) translateZ(0);
+  opacity: 1;
+  z-index: 999;
+  visibility: visible;
+}
+.modal.active .content {
+  opacity: 1;
+  visibility: visible;
+}
+.modal [data-dismiss=modal] {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  top: 2%;
+  right: 1%;
+}
+.modal [data-dismiss=modal]:focus i {
+  color: #0288D1;
+}
+.modal [data-dismiss=modal] i {
+  font-size: 2rem;
+}
+.modal [data-dismiss=modal] span {
+  display: block;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.5rem;
+  transform: translateY(1.1rem);
+}
+
+.modal .content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  opacity: 0;
+  overflow-y: scroll;
+  scrollbar-width: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0.3s;
+}
+.modal .content::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  
+}
+
+
+.modal .content.show-tag-results > div.results {
+  visibility: hidden;
+  transform: translateX(-100%);
+}
+.modal .content.show-tag-results > div.tag-results {
+  visibility: visible;
+  transform: translateX(0);
+}
+.tag {
+  list-style: none;
+}
+.modal .content > div {
+  position: absolute;
+  width: 100%;
+  top: 8rem;
+  left: 0;
+  transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+}
+.modal .content > div.results {
+  visibility: visible;
+  transform: translateX(0);
+}
+.modal .content > div.tag-results {
+  visibility: hidden;
+  transform: translateX(100%);
+}
+.modal h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 0.75rem;
+  margin-top: 0;
+}
+.modal input {
+  position: fixed;
+  display: block;
+  top:0;
+  width: 90%;
+  background: transparent;
+  border: 1px solid #0288D1;
+  border-width: 0 0 1px 0;
+  color: white;
+  padding-top: 1.5rem;
+  font-size: 2rem;
+  font-weight: 100;
+  font-family: "Roboto";
+  z-index: 1000000;
+}
+.modal input:focus {
+  outline: none;
+}
+.modal ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.modal ul li {
+  position: relative;
+  color: #949494;
+  font-size: 1.15rem;
+  padding: 0.75rem 0.5rem 0.75rem 1.75rem;
+  cursor: pointer;
+}
+.modal ul li:before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  left: 0.5rem;
+  margin-top: -4px;
+  display: block;
+  height: 8px;
+  width: 8px;
+  border: 2px solid white;
+  border-radius: 100%;
+}
+.modal ul li:hover, .modal ul li:focus {
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+.modal ul + h2 {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  margin-top: 1rem;
+}
+.modal .tag-results .selected-tag {
+  display: block;
+  position: absolute;
+  left: 3rem;
+  background: #0288D1;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+.modal .tag-results > ul {
+  margin-left: 35%;
+  width: 60%;
+}
+.modal .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.modal .back i {
+  font-size: 1.5rem;
+}
+.modal ::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 100;
+  font-family: "Roboto";
+}
+.modal :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 100;
+  font-family: "Roboto";
+}
+.modal ::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 100;
+  font-family: "Roboto";
+}
+
+.material-icons {
+  font-style: normal;
+  color: white;
+}
+
+
+/* Results Design **************************** Results Design */
+.result-container {
+  display: flex;
+  flex-direction: row;
+  height: 350px;
+  gap: 1rem;
+}
+
+.result-img {
+  /* flex: 15%; take up 20% of the container's width */
+}
+
+.result-details {
+  flex-grow: 1; /* take up remaining space in the container */
+}
+
+.result-details > * {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.result-title {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.result-description {
+  font-size: 1.5rem;
+  max-width: 40ch;
+}
+.ais-Hits-item {
+  list-style: none !important;
+}
+
+.result-poster {
+  font-size: 1.2rem;
+  position: absolute;
+  left:1%;
+  bottom: 2%;
+  background-color: #fff;
+  border-radius: 9px;
+  padding: .4em;
+}
+
+.result-poster::before {
+  content: 'By ';
+}
+.result-type {
+  background-color: #fff;
+  border-radius: 9px;
+  padding: .4em;
+  width:min-content;
+  position: absolute;
+  bottom: 2%;
+}
+
+
+/* ScrollBar  */
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: 0px;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0px;
+  }
+
+
+/* Media Queries */
+
+@media screen and (max-width:1246px) {
+  .result-container {
+    height: 250px;
+    gap: 1em;
+  }
+
+  .result-title {
+    font-size: 2rem;
+  }
+  
+  .result-description {
+    font-size: 1rem;
+  }
+  
+  .result-poster {
+    font-size: 1rem;
+  }
+  
+  .result-type {
+    font-size: 1rem;
+    padding: .4em;
+  }
+  
+}
+
+@media screen and (max-width: 664px) {
+  .result-container {
+    height: auto;
+    gap: 1em;
+  }
+  .result-details {
+    display: flex;
+    flex-direction: column;
+  }
+  .result-img {
+    height: 100px;
+  }
+  .result-title {
+    font-size: 1.5rem;
+  }
+  
+  .result-description {
+    font-size: .75rem;
+    margin-bottom: .8em;
+  }
+  
+  .result-poster {
+    width: max-content;
+    position: initial;
+    font-size: .75rem;
+  }
+  
+  .result-type {
+    font-size: .75rem;
+    position: initial;
+    padding: .4em;
+  }
+  .result-details > * {
+    margin-top: .5em;
+    margin-bottom: .5em;
+  }
+  .modal [data-dismiss=modal] {
+    z-index: 3000;
+    left: 2%;
+    right: initial;
+  }
+}

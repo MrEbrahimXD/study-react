@@ -1,0 +1,40 @@
+
+
+.error-container {
+    height: 100%;
+    background: radial-gradient(#fff2 30%, #fff4);
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #00000009, -1px -1px 2px #fff, 1px 1px 2px #fff;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  overflow: hidden;
+  padding: 1.5em;
+    margin: 10em 3em 3em 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    text-shadow: 2px 2px 0px #36a5ff71;
+    font-family: 'Cairo';
+}
+.error-container h1 {
+    font-size: 6rem;
+}
+.error-details {
+   font-size: 2rem;
+}
+
+.error-link {
+    font-size: 2rem;
+    text-align: center;
+    padding: 2.3em;
+    width: 80%;
+    height: 200px;
+    background: radial-gradient(#fff2 30%, #fff4);
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #00000009, -1px -1px 2px #fff, 1px 1px 2px #fff;
+  
+}
