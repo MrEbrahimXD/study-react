@@ -5,12 +5,23 @@ import "./App.css";
 import reportWebVitals from "./reportWebVitals";
 import AlgoliaSearch from "./Components/AlgoliaSearch/AlgoliaSearch.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// Main Page
 import ClassesContainers from "./Components/Classes/ClassesContainers";
+// 404 Error Page
 import ErrorPage from "./Components/Pages/errorPage";
 // Secondary Pages
 import FirstSecondary from "./Components/Pages/firstSecondary";
 import SecondSecondary from "./Components/Pages/secondSecondary";
 import ThirdSecondary from "./Components/Pages/thirdSecondary";
+// Auth
+import firebase from "firebase/app";
+import "firebase/auth";
+
+const firebaseConfig = {
+  // Your Firebase project configuration goes here
+};
+
+firebase.initializeApp(firebaseConfig);
 
 const router = createBrowserRouter([
   {
